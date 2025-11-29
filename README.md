@@ -9,6 +9,9 @@ The project includes full preprocessing, modeling, evaluation, and replication o
 
  <img width="966" height="748" alt="image" src="https://github.com/user-attachments/assets/2e3bd45a-4296-4719-a01a-106c51d8706e" />
 
+For U.S. companies we used the publicly available S&P 500 dataset: https://www.kaggle.com/datasets/paultimothymooney/stock-market-data?resource=download-directory
+
+The dataset includes features such as Date, Low, Open, Volume, High, Close, and Adjusted Close. For consistency, we selectedfour representative companies Apple (AAPL), Bank of America (BAC), Alphabet Inc. (GOOG), and Johnson & Johnson (JNJ) and aligned the time period with the Saudi dataset, spanning from December 31, 2001, to March 5, 2020.
 
 
 ### 1. Feature Correlation Analysis
