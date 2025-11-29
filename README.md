@@ -4,6 +4,13 @@ Enhanced Saudi stock price forecasting using 34 technical indicators and deep le
 This repository provides a complete research-grade pipeline for Saudi stock price forecasting using 34 technical indicators, feature correlation analysis, and deep learning ensemble architectures (LSTM, GRU, BiRNN, Stacking, Averaging).
 The project includes full preprocessing, modeling, evaluation, and replication on U.S. market stocks.
 
+### Dataset 
+ In this study the multivariate time series of the Tadawul All Share Index (TASI) the primary index of the Saudi stock market was used. The dataset, publicly available via https://www.kaggle.com/datasets/salwaalzahrani/saudi-stock-exchange-tadawul .Ten companies were selected to represent major sectors of the Saudi market. The dataset includes more than 13 features, with closing price as the target variable as shown in the table:
+
+ <img width="966" height="748" alt="image" src="https://github.com/user-attachments/assets/2e3bd45a-4296-4719-a01a-106c51d8706e" />
+
+
+
 ### 1. Feature Correlation Analysis
 
 Understanding relationships among technical indicators and price movements is a key step in building reliable forecasting models.
