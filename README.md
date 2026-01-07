@@ -151,3 +151,19 @@ Includes:
 ```bash
 git clone https://github.com/ranabameer/saudi-stock-forecasting-ensembles
 cd saudi-stock-forecasting-ensembles
+
+### Recommended Execution Order
+
+PaersonCorrelation.ipynb
+
+PrepareFeatursOfData.ipynb
+
+Standalone model notebooks (Saudi and U.S.)
+
+Ensemble notebooks
+
+TestingResults.ipynb
+
+Plot.ipynb
+
+Ensure dataset paths inside notebooks are updated to match your local directory structure.
