@@ -1,9 +1,7 @@
 # Saudi Stock Forecasting with Deep Learning Ensembles
 
 ## Title
-**Ensemble Deep Learning Models for Stock1
-Price Forecasting: Evidence from the Saudi2
-Markets**
+**Ensemble Deep Learning Models for StockPrice Forecasting: Evidence from the Saudi Markets**
 
 ---
 
