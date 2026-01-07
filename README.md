@@ -232,14 +232,13 @@ Experiments were conducted using Google Colaboratory (Colab), a cloud-based Jupy
 
 ## Citations
 
-Alzahrani, S. (2020). Saudi stock exchange (tadawul). Available at: https://www.kaggle.com/489
-datasets/salwaalzahrani/saudi-stock-exchange-tadawul.490
-Ampomah, E. K., Qin, Z., and Nyame, G. (2020). Evaluation of tree-based ensemb
+- Alzahrani, S. (2020). *Saudi Stock Exchange (Tadawul)*. Kaggle Dataset.  
+  https://www.kaggle.com/datasets/salwaalzahrani/saudi-stock-exchange-tadawul
 
-Mooney, P. (2022). Stock market data (nasdaq, nyse, s and p500). https://www.535
-kaggle.com/datasets/paultimothymooney/stock-market-data?resource=536
-download-directory.537
+- Mooney, P. (2022). *Stock Market Data (NASDAQ, NYSE, S&P 500)*. Kaggle Dataset.  
+  https://www.kaggle.com/datasets/paultimothymooney/stock-market-data
 
+If this repository is used in academic research, please also cite the associated publications by the authors.
 
 ## License
 
@@ -248,5 +247,10 @@ This repository is provided for **research and academic purposes only**.
 The code and materials are not licensed for commercial use or redistribution at this stage.  
 A formal open-source license may be added in the future upon publication or project completion.
 
+## Contribution Guidelines
+
+- This repository is primarily intended for academic and research use.
+- Contributions such as bug fixes, documentation improvements, or reproducibility enhancements are welcome.
+- Please fork the repository, create a feature branch, and submit a pull request with a clear description of changes.
 
 
