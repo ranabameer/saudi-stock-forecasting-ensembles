@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Saudi Stock Price Forecasting Using Deep Learning Ensembles"
+message: "If you use this software in your research, please cite it."
+type: software
+authors:
+  - family-names: Baamer
+    given-names: Rana
+affiliation: King Fahd University of Petroleum and Minerals
+year: 2025
+url: https://github.com/ranabameer/saudi-stock-forecasting-ensembles
+preferred-citation:
+  type: article
+  title: "Ensemble Deep Learning Models for Stock Price Forecasting: Evidence from the Saudi Market"
+  authors:
+    - family-names: Baamer
+      given-names: Rana
+    - family-names: Aljamaan
+      given-names: Hamoud
+  year: 2025
