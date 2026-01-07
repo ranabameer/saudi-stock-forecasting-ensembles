@@ -1,164 +1,153 @@
-# saudi-stock-forecasting-ensembles
-Enhanced Saudi stock price forecasting using 34 technical indicators and deep learning ensembles (LSTM, GRU, BiRNN). Includes preprocessing, rolling-window multivariate modeling, and evaluation across multiple companies with replication on U.S. stocks for validation.
+# Saudi Stock Forecasting with Deep Learning Ensembles
 
-This repository provides a complete research-grade pipeline for Saudi stock price forecasting using 34 technical indicators, feature correlation analysis, and deep learning ensemble architectures (LSTM, GRU, BiRNN, Stacking, Averaging).
-The project includes full preprocessing, modeling, evaluation, and replication on U.S. market stocks.
+## Title
+**Saudi Stock Forecasting with Deep Learning Ensembles (KSA with U.S. Replication)**
 
-### Dataset 
- In this study the multivariate time series of the Tadawul All Share Index (TASI) the primary index of the Saudi stock market was used. The dataset, publicly available via https://www.kaggle.com/datasets/salwaalzahrani/saudi-stock-exchange-tadawul .Ten companies were selected to represent major sectors of the Saudi market. The dataset includes more than 13 features, with closing price as the target variable as shown in the table:
+---
 
- <img width="966" height="748" alt="image" src="https://github.com/user-attachments/assets/2e3bd45a-4296-4719-a01a-106c51d8706e" />
+## Description
 
-For U.S. companies we used the publicly available S&P 500 dataset: https://www.kaggle.com/datasets/paultimothymooney/stock-market-data?resource=download-directory
+This repository presents a **research-grade and reproducible pipeline** for stock price forecasting in the Saudi stock market using **deep learning ensemble models**. The framework integrates **34 technical indicators**, **feature correlation analysis**, and **multivariate multi-step forecasting** using recurrent neural networks.
 
-The dataset includes features such as Date, Low, Open, Volume, High, Close, and Adjusted Close. For consistency, we selected four representative companies Apple (AAPL), Bank of America (BAC), Alphabet Inc. (GOOG), and Johnson & Johnson (JNJ) and aligned the time period with the Saudi dataset, spanning from December 31, 2001, to March 5, 2020.
+The proposed methodology is evaluated on major Saudi companies listed on the **Tadawul All Share Index (TASI)** and is further **replicated on U.S. stocks** to assess generalization and robustness. The repository includes all stages of the experimental workflow, from data preprocessing to model training, ensemble construction, and performance evaluation.
 
+---
+
+## Dataset Information
+
+### Saudi Stock Market (KSA)
+
+- **Market**: Tadawul All Share Index (TASI)
+- **Source**: Publicly available Kaggle dataset  
+  https://www.kaggle.com/datasets/salwaalzahrani/saudi-stock-exchange-tadawul
+- **Scope**:
+  - Ten Saudi companies representing major market sectors
+  - Multivariate daily time series
+- **Features**:
+  - Raw market variables (e.g., Open, High, Low, Volume)
+  - Engineered technical indicators (34 indicators)
+- **Target Variable**:
+  - Closing price
+
+### U.S. Stock Market (Replication Study)
+
+- **Market**: S&P 500
+- **Source**: Kaggle dataset  
+  https://www.kaggle.com/datasets/paultimothymooney/stock-market-data
+- **Selected Companies**:
+  - Apple (AAPL)
+  - Bank of America (BAC)
+  - Alphabet Inc. (GOOG)
+  - Johnson & Johnson (JNJ)
+- **Time Period**:
+  - December 31, 2001 – March 5, 2020 (aligned with Saudi data)
+- **Features**:
+  - Date, Open, High, Low, Close, Adjusted Close, Volume
+
+---
+
+## Code Information (Repository Structure)
+
+The repository consists of modular Jupyter notebooks organized according to the experimental pipeline:
 
 ### 1. Feature Correlation Analysis
+**Notebook**: `PaersonCorrelation.ipynb`
 
-Understanding relationships among technical indicators and price movements is a key step in building reliable forecasting models.
-This repository begins with detailed feature correlation visualizations and analysis.
+- Pearson correlation heatmaps
+- Multicollinearity analysis
+- Identification of highly correlated and redundant indicators
+- Exploration of indicator–price relationships
 
-Notebook:
-
-📌 PaersonCorrelation.ipynb
-
-This notebook includes:
-
-Pearson correlation heatmaps between indicators and target prices
-
-Multicollinearity inspection
-
-Highlighting features with strong predictive signals
-
-Identifying redundant or highly correlated inputs
-
-Visual exploration of indicator–price relationships
-
-These insights help optimize the feature set used across all forecasting models.
+---
 
 ### 2. Feature Engineering
-Notebook:
+**Notebook**: `PrepareFeatursOfData.ipynb`
 
-📌 PrepareFeatursOfData.ipynb
+- Computation of **34 technical indicators**
+- Handling of missing values introduced by rolling calculations
+- Preparation of feature-enriched datasets
 
-Includes:
-
-Calculation of 34 technical indicators
+---
 
 ### 3. Standalone Deep Learning Models
 
-#### Saudi(KSA) Market Models
-
-Notebook:
-
-📌 Standalone_Saudi_BiRNN_GRU_LSTM_multivriate_multistep_model.ipynb
+#### Saudi Market Models
+**Notebook**:  
+`Standalone_Saudi_BiRNN_GRU_LSTM_multivriate_multistep_model.ipynb`
 
 Includes:
+- Rolling-window transformation
+- Normalization and scaling
+- Multivariate multi-step (5-day ahead) forecasting
+- Model training, hyperparameter configuration, and evaluation
 
-Rolling-window transformations
-
-Normalization and scaling
-
-Handling missing values
-
-Multi-step (5-day ahead) target generation
-
-Exporting ready-to-train datasets for all companies
-
-Implements:
-
-BiRNN
-
-GRU
-
-LSTM
-
-Multivariate, multi-step forecasting
-
-Model training loops, hyperparameters, evaluation
+Implemented models:
+- BiRNN
+- GRU
+- LSTM
 
 #### U.S. Market Replication
-Notebook:
+**Notebook**:  
+`US_Standalone_BiRNN_GRU_LSTM_multivriate_multistep_model.ipynb`
 
-📌 US_Standalone_BiRNN_GRU_LSTM_multivriate_multistep_model.ipynb
+- Applies the same methodology used for Saudi data
+- Evaluates model generalization on U.S. stocks
 
-Verifies model stability on U.S. stocks for generalization following the same approch followed on KSA data.
+---
 
-###  4. Ensemble Models
+### 4. Ensemble Models
 
- Averaging Ensembles
- 
-Combine multiple standalone models to improve robustness and reduce variance.
+#### Averaging Ensembles
+- Combines predictions from standalone models
+- Reduces variance and improves robustness
 
-Stacking Ensembles
-
-Notebook:
-
-📌 EnsembleUsStacking
-
-📌 Ensemble Stacking in Neural Networks.ipynb
-
-Includes:
-
-Stacking GRU-LSTM
-
-Stacking BiRNN-LSTM
-
-Meta-learner design
-
-Optimizing ensemble weights
-
-Cross-company ensemble evaluation
-
-### 5. Experiment Results & Visualization
-
-Notebook:
-
-📌 TestingResults.ipynb
-
-📌 Plot.ipynb
+#### Stacking Ensembles
+**Notebooks**:
+- `Ensemble Stacking in Neural Networks.ipynb`
+- `EnsembleUsStacking`
 
 Includes:
+- GRU–LSTM stacking
+- BiRNN–LSTM stacking
+- Meta-learner design
+- Cross-company ensemble evaluation
 
-5-day ahead prediction plots
+---
 
-Evaluation metrics (MAE, RMSE, MRE, R²)
+### 5. Experiment Results and Visualization
+**Notebooks**:
+- `TestingResults.ipynb`
+- `Plot.ipynb`
 
-Saudi vs. U.S. performance comparison
+Includes:
+- 5-day ahead prediction plots
+- Evaluation metrics:
+  - MAE
+  - RMSE
+  - MRE
+  - R²
+- Saudi vs. U.S. performance comparison
+- Visualization of ensemble improvements
 
-Visualization of ensemble improvements
+---
 
-### Key Features
+## Methodology
 
-34+ engineered technical indicators
+1. Load and clean raw stock market data
+2. Compute 34 technical indicators
+3. Perform feature correlation and multicollinearity analysis
+4. Construct rolling-window multivariate datasets
+5. Normalize and scale input features
+6. Train standalone deep learning models (BiRNN, GRU, LSTM)
+7. Build ensemble models using averaging and stacking
+8. Evaluate forecasting performance using standard regression metrics
+9. Replicate experiments on U.S. stocks to validate generalization
 
-Multivariate 5-day-ahead forecasting
+---
 
-RNN-based deep learning models
+## Usage Instructions
 
-Ensemble learning (Averaging + Stacking)
-
-Cross-market validation (Saudi + U.S.)
-
-Reproducible and modular design
-
-### Usage
-
-Clone the repository:
-
+### Clone the Repository
+```bash
 git clone https://github.com/ranabameer/saudi-stock-forecasting-ensembles
-
 cd saudi-stock-forecasting-ensembles
-
-Run notebooks in order:
-
-PaersonCorrelation.ipynb
-
-PrepareFeatursOfData.ipynb
-
-Standalone model notebooks
-
-Ensemble notebooks
-
-TestingResults.ipynb and Plot.ipynb
