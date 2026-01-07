@@ -232,9 +232,13 @@ Experiments were conducted using Google Colaboratory (Colab), a cloud-based Jupy
 
 ## Citations
 
-If this repository or its outputs are used in academic research, please cite:
+Alzahrani, S. (2020). Saudi stock exchange (tadawul). Available at: https://www.kaggle.com/489
+datasets/salwaalzahrani/saudi-stock-exchange-tadawul.490
+Ampomah, E. K., Qin, Z., and Nyame, G. (2020). Evaluation of tree-based ensemb
 
-Baamer, R., & Aljamaan, H. Ensemble Deep Learning Models for Stock Price Forecasting: Evidence from the Saudi Market, 2025.
+Mooney, P. (2022). Stock market data (nasdaq, nyse, s and p500). https://www.535
+kaggle.com/datasets/paultimothymooney/stock-market-data?resource=536
+download-directory.537
 
 
 ## License
