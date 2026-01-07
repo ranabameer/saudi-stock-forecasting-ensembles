@@ -1,7 +1,9 @@
 # Saudi Stock Forecasting with Deep Learning Ensembles
 
 ## Title
-**Saudi Stock Forecasting with Deep Learning Ensembles (KSA with U.S. Replication)**
+**Ensemble Deep Learning Models for Stock1
+Price Forecasting: Evidence from the Saudi2
+Markets**
 
 ---
 
@@ -151,19 +153,98 @@ Includes:
 ```bash
 git clone https://github.com/ranabameer/saudi-stock-forecasting-ensembles
 cd saudi-stock-forecasting-ensembles
-
+```
+### Create a Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+### Install Dependencies
+All required dependencies are listed in requirements.txt:
+```bash
+pip install -r requirements.txt
+```
 ### Recommended Execution Order
 
-PaersonCorrelation.ipynb
+`PaersonCorrelation.ipynb`
 
-PrepareFeatursOfData.ipynb
+`PrepareFeatursOfData.ipynb`
 
 Standalone model notebooks (Saudi and U.S.)
 
 Ensemble notebooks
 
-TestingResults.ipynb
+`TestingResults.ipynb`
 
-Plot.ipynb
+`Plot.ipynb`
 
 Ensure dataset paths inside notebooks are updated to match your local directory structure.
+
+## Requirements
+
+The project dependencies are defined in `requirements.txt`:
+```bash
+numpy>=1.21
+pandas>=1.4
+scipy>=1.8
+matplotlib>=3.5
+seaborn>=0.12
+scikit-learn>=1.1
+permetrics>=1.5
+tensorflow>=2.10
+keras>=2.10
+pandas-ta>=0.3.14b0
+python-dateutil>=2.8
+```
+## Materials & Methods (Reproducibility)
+
+To ensure reproducibility:
+
+- Use the same dataset versions
+  
+- Maintain identical rolling-window configurations
+  
+- Apply normalization using training data only
+  
+- Fix random seeds for all experiments
+  
+- Preserve hyperparameter settings and evaluation metrics
+  
+- Document hardware and software configurations
+
+## Computing Infrastructure
+
+Experiments were conducted using Google Colaboratory (Colab), a cloud-based Jupyter notebook environment. The computational setup is summarized as follows:
+
+- Platform: Google Colaboratory
+
+- Operating System: Linux (Ubuntu-based, managed by Colab)
+
+- CPU: Intel Xeon (cloud virtualized, exact model varies by session)
+
+- RAM: Approximately 12–16 GB (standard Colab runtime)
+
+- GPU: NVIDIA Tesla T4 / P100 (when GPU runtime is enabled)
+
+- Python Version: Python 3.9
+
+- Deep Learning Framework: TensorFlow / Keras
+
+- Execution Environment: Jupyter Notebook (cloud-based)
+
+## Citations
+
+If this repository or its outputs are used in academic research, please cite:
+
+Baamer, R., & Aljamaan, H. Ensemble Deep Learning Models for Stock Price Forecasting: Evidence from the Saudi Market, 2025.
+
+
+## License
+
+This repository is provided for **research and academic purposes only**.
+
+The code and materials are not licensed for commercial use or redistribution at this stage.  
+A formal open-source license may be added in the future upon publication or project completion.
+
+
+
