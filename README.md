@@ -51,7 +51,7 @@ The proposed methodology is evaluated on major Saudi companies listed on the **T
 The repository consists of modular Jupyter notebooks organized according to the experimental pipeline:
 
 ### 1. Feature Correlation Analysis
-**Notebook**: `PaersonCorrelation.ipynb`
+**Notebook**: `PaersonCorrelation.py`
 
 - Pearson correlation heatmaps
 - Multicollinearity analysis
